@@ -1,1 +1,93 @@
+script
+mkdir playGit
+//WARNING IGNORE STATEMENT BELOW 
+*
+*
+barrona5@hopper:~$ rm -rf .git //I will keep this in here, but NEVER use this command unless you know what you are doing. Wiegand helped me with this. 
+*
+*
+//WARNING IGNORE STATEMENT ABOVE
+barrona5@hopper:~$ cd PlayGitDir
+barrona5@hopper:~/PlayGitDir$ ls
+barrona5@hopper:~/PlayGitDir$ git init
+Initialized empty Git repository in /home/acc.barrona5/PlayGitDir/.git/
+barrona5@hopper:~/PlayGitDir$ add file HelloWorld.cc
 
+Command 'add' not found, did you mean:
+
+  command 'hadd' from snap root-framework (v6-28-06)
+  command 'dad' from deb debian-dad (1)
+  command 'tdd' from deb devtodo (0.1.20-7build1)
+  command 'ddd' from deb ddd (1:3.3.12-5.2build1)
+  command 'aid' from deb id-utils (4.6+git20120811-4ubuntu2)
+  command 'pdd' from deb pdd (1.4-2)
+  command 'ad' from deb netatalk (3.1.12~ds-4ubuntu0.20.04.1)
+  command 'axd' from deb afnix (2.9.2-2build1)
+  command 'amd' from deb am-utils (6.2+rc20110530-3.2ubuntu2)
+  command 'ldd' from deb libc-bin (2.31-0ubuntu9.12)
+  command 'dd' from deb coreutils (8.30-3ubuntu2)
+  command 'atd' from deb at (3.1.23-1ubuntu1)
+  command 'adb' from deb adb (1:8.1.0+r23-5ubuntu2)
+
+See 'snap info <snapname>' for additional versions.
+
+barrona5@hopper:~/PlayGitDir$ git add HelloWorld.cc
+fatal: pathspec 'HelloWorld.cc' did not match any files
+barrona5@hopper:~/PlayGitDir$ ls
+barrona5@hopper:~/PlayGitDir$ nano HelloWorld.cc
+barrona5@hopper:~/PlayGitDir$ g++ -o HelloWorld HelloWorld.cc
+barrona5@hopper:~/PlayGitDir$ ./HelloWorld
+Hello world
+barrona5@hopper:~/PlayGitDir$ git add HelloWorld.cc
+barrona5@hopper:~/PlayGitDir$ ls
+HelloWorld  HelloWorld.cc
+barrona5@hopper:~/PlayGitDir$ git branch <personalize>
+bash: syntax error near unexpected token `newline'
+barrona5@hopper:~/PlayGitDir$ git branch <branchname>
+bash: syntax error near unexpected token `newline'
+barrona5@hopper:~/PlayGitDir$ ls
+HelloWorld  HelloWorld.cc
+barrona5@hopper:~/PlayGitDir$ git branch <branchname>
+bash: syntax error near unexpected token `newline'
+barrona5@hopper:~/PlayGitDir$ git commit -m "adding the .cc to main branch"
+[master (root-commit) 422ccad] adding the .cc to main branch
+ 1 file changed, 10 insertions(+)
+ create mode 100644 HelloWorld.cc
+barrona5@hopper:~/PlayGitDir$ git branch personalize
+barrona5@hopper:~/PlayGitDir$ git checkout personalize
+Switched to branch 'personalize'
+barrona5@hopper:~/PlayGitDir$ nano makefile
+barrona5@hopper:~/PlayGitDir$ makefile
+bash: ./makefile: Permission denied
+barrona5@hopper:~/PlayGitDir$ make
+g++ -c HelloWorld.cc
+g++ -o HelloWorld.exe HelloWorld.o
+barrona5@hopper:~/PlayGitDir$ ./HelloWorld
+Hello world
+barrona5@hopper:~/PlayGitDir$ git add makefile
+barrona5@hopper:~/PlayGitDir$ ls
+HelloWorld  HelloWorld.cc  HelloWorld.exe  HelloWorld.o  makefile
+barrona5@hopper:~/PlayGitDir$ git commit -m "Added makefile to the personalize branch"
+[personalize 9c4e944] Added makefile to the personalize branch
+ 1 file changed, 14 insertions(+)
+ create mode 100644 makefile
+barrona5@hopper:~/PlayGitDir$ nano makefile
+barrona5@hopper:~/PlayGitDir$ ls
+HelloWorld  HelloWorld.cc  HelloWorld.exe  HelloWorld.o  makefile
+barrona5@hopper:~/PlayGitDir$ nano HelloWorld.cc
+barrona5@hopper:~/PlayGitDir$ make
+g++ -c HelloWorld.cc
+g++ -o HelloWorld.exe HelloWorld.o
+barrona5@hopper:~/PlayGitDir$ ./HelloWorld
+Hello world
+barrona5@hopper:~/PlayGitDir$ make
+make: Nothing to be done for 'all'.
+barrona5@hopper:~/PlayGitDir$ nano HelloWorld.cc
+barrona5@hopper:~/PlayGitDir$ nano HelloWorld.cc
+barrona5@hopper:~/PlayGitDir$ make
+g++ -c HelloWorld.cc
+g++ -o HelloWorld.exe HelloWorld.o
+barrona5@hopper:~/PlayGitDir$ ./HelloWorld
+Hello world
+barrona5@hopper:~/PlayGitDir$ make
+make: Nothing to be done for 'all'.
