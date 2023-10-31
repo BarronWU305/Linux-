@@ -3,4 +3,7 @@ find . -iname "^output-[0-9]\+.txt" -exec grep -Hi "DBG:" {} \;
 
 Mine: 
 //piece that was given from the hw // using std::atan2;
-find . -name -exce grep "using std::atan2;" {}\;
+
+find . -name -exec grep "using std::atan2;" {}\;
+
+what worked find /usr -type f -exec grep -Hin "using std::atan2;"{} \;
