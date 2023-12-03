@@ -1,0 +1,18 @@
+#!/bin/bash 
+
+# Start the 'yes' command in the background 
+yes > /dev/null &
+
+# Get the PID of the 'yes' process 
+yes_pid=$! 
+
+# Display the PID and show that 'yes' is running 
+echo "pid of 'yes' process: $yes_pid"
+ps -af | grep "yes" 
+
+# Kill the 'yes' process
+kill $yes_pid 
+
+# Display 'yes' no longer running 
+echo "we have killed the 'yes':"
+ps -af | grep "yes" 
