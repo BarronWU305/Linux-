@@ -8,4 +8,22 @@ find . -name -exec grep "using std::atan2;" {}\;
 
 what worked find /usr -type f -exec grep -Hin "using std::atan2;"{} \;
 
+---------------------10/10----------------------------------------------------
+the command I used to find the file(s) and line number(s) where the string:  "using std::atan2;" from the /usr directory is:
+
+find /usr -type f ( -name ".c" -o -name ".cc" -o -name ".cpp" -o -name ".h" -o -name "*.hpp" ) -exec grep -Hn "using std::atan2;" {} ;
+
+The file(s) is/are that string found, and on which line numbers in those files are:
+
+/usr/include/boost/units/cmath.hpp:710:    using std::atan2;
+/usr/include/boost/units/cmath.hpp:721:    using std::atan2;
+/usr/include/boost/math/differentiation/autodiff.hpp:1615:  using std::atan2;
+/usr/include/boost/math/differentiation/autodiff.hpp:1631:  using std::atan2;
+/usr/include/boost/math/differentiation/autodiff.hpp:1647:  using std::atan2;
+/usr/include/boost/math/cstdfloat/cstdfloat_complex_std.hpp:224:    inline BOOST_CSTDFLOAT_EXTENDED_COMPLEX_FLOAT_TYPE arg (const complex<BOOST_CSTDFLOAT_EXTENDED_COMPLEX_FLOAT_TYPE>& x) { using std::atan2; return atan2(x.imag(), x.real()); }
+/usr/include/boost/math/cstdfloat/cstdfloat_complex_std.hpp:402:      using std::atan2;
+/usr/include/boost/math/tools/config.hpp:325:   using std::atan2;\
+/usr/include/boost/geometry/srs/projections/impl/function_overloads.hpp:26:    using std::atan2;
+/usr/include/c++/7/math.h:42:using std::atan2;
+/usr/include/c++/9/math.h:42:using std::atan2;
 
