@@ -37,4 +37,26 @@ chmod +x check_files.sh
 
 ./check_files.sh filename directoryname
 
+------------------------------------------------------------------------------------------------------------
+
+#!/bin/bash
+#Takes two parameters and gives an error if there are more or less than that 
+if [ $# -eq 2 ]; then 
+    #Checks to see if there is a file in the current directory with the same name as the first given par
+    if [ -f $1 ]; then 
+        echo "Parameter exists as a file in current directory"
+    else 
+        echo "Parameter does not exist as a file in current directory"
+    fi 
+    #Checks to see if there is a director in the current director with the name given as the second given
+    if [ -d $2 ]; then 
+        echo "Parameter does exist in current directory" 
+    else 
+        echo "Parameter  does not exist in current directory" 
+    fi 
+else 
+    echo "only takes two parameters" 
+    exit 
+fi 
+
 
